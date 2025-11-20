@@ -1,388 +1,210 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Pecel Lele</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #fffbf5;
-    color: #3a3a3a;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  header {
-    background: #00703c;
-    color: white;
-    padding: 1.5rem 2rem;
-    text-align: center;
-    font-weight: 600;
-    font-size: 2rem;
-    letter-spacing: 2px;
-  }
-  main {
-    max-width: 900px;
-    margin: 2rem auto 2rem auto;
-    padding: 0 1.5rem;
-    flex-grow: 1;
-  }
-  section {
-    margin-bottom: 2.5rem;
-  }
-  section.menu-item {
-    background: #f3f7f1;
-    border-radius: 12px;
-    padding: 1.5rem 2rem;
-    box-shadow: 0 6px 15px rgba(0,112,60,0.15);
-  }
-  section.menu-item h2 {
-    margin-top: 0;
-    color: #00703c;
-    font-weight: 700;
-    font-size: 1.8rem;
-  }
-  section.menu-item p.description {
-    font-size: 1.1rem;
-    margin: 0.8rem 0 1.2rem 0;
-  }
-  section.menu-item p.price {
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: #004d26;
-  }
-  .with-ice-tea {
-    font-style: italic;
-    color: #6a6a6a;
-    margin-top: 0.25rem;
-  }
-  video {
-    max-width: 100%;
-    border-radius: 12px;
-    margin: 1rem 0 1.5rem 0;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
-  }
-  form.order-form {
-    background: #e8f0e8;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,112,60,0.2);
-  }
-  form.order-form h3 {
-    margin-top: 0;
-    color: #005927;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-  }
-  label {
-    display: block;
-    margin-bottom: 0.3rem;
-    font-weight: 600;
-    color: #004422;
-  }
-  select, input[type="text"], input[type="email"], input[type="number"], textarea {
-    width: 100%;
-    padding: 0.6rem 0.8rem;
-    margin-bottom: 1.2rem;
-    border-radius: 8px;
-    border: 1.5px solid #a1d99b;
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-    transition: border-color 0.3s ease;
-  }
-  select:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus, textarea:focus {
-    border-color: #4caf50;
-    outline: none;
-  }
-  .coupon-section {
-    margin-bottom: 1rem;
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .coupon-section input {
-    flex-grow: 1;
-    min-width: 180px;
-  }
-  .coupon-section button {
-    background: #4caf50;
-    color: white;
-    font-weight: 700;
-    border: none;
-    border-radius: 8px;
-    padding: 0.55rem 1.5rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  .coupon-section button:disabled {
-    background: #9fd6a1;
-    cursor: not-allowed;
-  }
-  .coupon-section button:hover:not(:disabled) {
-    background: #388e3c;
-  }
-  button#claimCouponBtn {
-    background: #00703c;
-    color: white;
-    font-weight: 700;
-    border: none;
-    border-radius: 8px;
-    padding: 0.55rem 1.5rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  button#claimCouponBtn:hover {
-    background: #004d26;
-  }
-  button#submit-order {
-    background: #00703c;
-    color: white;
-    padding: 0.85rem 2rem;
-    border: none;
-    font-weight: 700;
-    font-size: 1.1rem;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin-top: 1rem;
-    width: 100%;
-  }
-  button#submit-order:hover {
-    background: #004d26;
-  }
-  .discount-info {
-    color: #207a20;
-    font-weight: 600;
-    margin-top: -1rem;
-    margin-bottom: 1rem;
-    min-height: 1.2em;
-  }
-  footer {
-    background: #004d26;
-    color: white;
-    text-align: center;
-    padding: 1.5rem 0 3rem 0;
-    font-weight: 600;
-    margin-top: auto;
-  }
-  footer .owner {
-    margin-top: 1rem;
-    font-weight: normal;
-    font-size: 0.95rem;
-    color: #a7d9a7;
-  }
-  footer .phone {
-    font-weight: 600;
-    margin-top: 0.25rem;
-  }
-  @media (max-width: 600px) {
-    .coupon-section {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    .coupon-section input, .coupon-section button {
-      width: 100%;
-      display: block;
-      margin-bottom: 0;
-    }
-  }
-</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portofolio Kukuh Aldyanto</title>
+    <style>
+        /* Reset dan style dasar */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #181818;
+            color: white;
+        }
+        a {
+            color: #d9d900;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 60px;
+            background-color: #0e0e0e;
+            align-items: center;
+        }
+        header .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        header .logo img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+        nav a {
+            font-weight: 600;
+            color: #d9d900;
+            cursor: pointer;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            display: flex;
+            max-width: 1200px;
+            margin: 30px auto;
+            align-items: center;
+            gap: 50px;
+            padding: 0 20px;
+        }
+        main .intro {
+            max-width: 600px;
+        }
+        main .intro h2 {
+            font-weight: 600;
+            font-size: 22px;
+            color: #3cbf28;
+            margin-bottom: 10px;
+        }
+        main .intro h1 {
+            font-size: 36px;
+            font-weight: 900;
+            margin: 0 0 20px 0;
+        }
+        main .intro p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+        main .intro p a {
+            color: white;
+        }
+        main .intro p a:hover {
+            text-decoration: underline;
+        }
+        .contact-buttons {
+            margin: 25px 0 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .btn-email {
+            background-color: #3cbf28;
+            border: none;
+            padding: 10px 25px;
+            color: white;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        .btn-email:hover {
+            background-color: #329e21;
+        }
+        .btn-social {
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .btn-social:hover {
+            color: #3cbf28;
+        }
+        .download-cv {
+            font-size: 13px;
+            color: #999;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+        .download-cv:hover {
+            text-decoration: underline;
+        }
+        .profile-photo {
+            max-width: 300px;
+            border-radius: 6px;
+            filter: grayscale(100%) contrast(80%);
+            position: relative;
+        }
+        .profile-photo svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Style icon inline untuk Email dengan SVG */
+        .email-icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            fill: white;
+        }
+    
+        /* Responsif */
+        @media (max-width: 900px) {
+            main {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .profile-photo {
+                max-width: 100%;
+                margin-top: 25px;
+            }
+        }
+    </style>
 </head>
 <body>
-<header>
-   Pecel Lele
-</header>
-<main>
-  <section id="introduction" aria-label="Pengenalan dan Sejarah Pecel Lele">
-    <h2 style="color: #00703c; font-weight:700; margin-bottom:0.75rem;">Pengenalan dan Sejarah Pecel Lele</h2>
-    <p>Pecel Lele adalah hidangan tradisional Indonesia yang populer, terutama di Jawa dan sekitarnya. Lele goreng renyah disajikan dengan sambal pedas dan nasi putih hangat, menjadikannya favorit di banyak kalangan sejak lama.  kami menghadirkan berbagai pilihan Pecel Lele dengan cita rasa khas, disajikan lengkap dengan es teh segar.</p>
-    <p>Voucher yang tersedia</p>
-    <p> "DISKON10"</p>
-    <p> "PECELHEMAT"</p>
-    <p> "LELEJUMBO"</p>
-  </section>
-
-  <section class="menu-item" id="hemat-10rb" tabindex="0" aria-labelledby="menu1-title">
-    <h2 id="menu1-title">Pecel Lele Hemat <span style="color:#00703c;">10rb Rupiah</span></h2>
-    <p class="description">Seporsi pecel lele lezat dengan sambal istimewa, disajikan dengan nasi hangat dan teh es segar.</p>
-    <p class="price">Harga: Rp 10.000,- <br /><span class="with-ice-tea">Semua menu sudah termasuk es teh.</span></p>
-    <video controls poster="pecel-lele-hemat.jpg" aria-label="Video Pecel Lele Hemat">
-      <source src="pecel-lele-hemat.mp4" type="video/mp4" />
-      Browser Anda tidak mendukung video.
-    </video>
-  </section>
-
-  <section class="menu-item" id="jumbo-17rb" tabindex="0" aria-labelledby="menu2-title">
-    <h2 id="menu2-title">Pecel Lele Jumbo <span style="color:#00703c;">17rb Rupiah</span></h2>
-    <p class="description">Pecel lele dengan porsi jumbo, cocok untuk kamu yang lapar banget. Dilengkapi sambal kremes dan teh es.</p>
-    <p class="price">Harga: Rp 17.000,- <br /><span class="with-ice-tea">Semua menu sudah termasuk es teh.</span></p>
-    <video controls poster="pecel-lele-jumbo.jpg" aria-label="Video Pecel Lele Jumbo">
-      <source src="pecel-lele-jumbo.mp4" type="video/mp4" />
-      Browser Anda tidak mendukung video.
-    </video>
-  </section>
-
-  <section class="menu-item" id="kremes-15rb" tabindex="0" aria-labelledby="menu3-title">
-    <h2 id="menu3-title">Pecel Lele Kremes <span style="color:#00703c;">15rb Rupiah</span></h2>
-    <p class="description">Lele goreng renyah dengan taburan kremes gurih, disajikan lengkap dengan nasi dan es teh.</p>
-    <p class="price">Harga: Rp 15.000,- <br /><span class="with-ice-tea">Semua menu sudah termasuk es teh.</span></p>
-    <video controls poster="pecel-lele-kremes.jpg" aria-label="Video Pecel Lele Kremes">
-      <source src="pecel-lele-kremes.mp4" type="video/mp4" />
-      Browser Anda tidak mendukung video.
-    </video>
-  </section>
-
-  <section class="order-form-section">
-    <form class="order-form" id="orderForm" aria-label="Form pemesanan Pecel Lele">
-      <h3>Order Sekarang</h3>
-
-      <label for="menuSelect">Pilih Menu</label>
-      <select id="menuSelect" name="menu" required aria-required="true" aria-describedby="menuHelp">
-        <option value="" disabled selected>-- Pilih menu --</option>
-        <option value="Pecel Lele Hemat">Pecel Lele Hemat - Rp 10.000</option>
-        <option value="Pecel Lele Jumbo">Pecel Lele Jumbo - Rp 17.000</option>
-        <option value="Pecel Lele Kremes">Pecel Lele Kremes - Rp 15.000</option>
-      </select>
-
-      <label for="quantity">Jumlah Pesanan</label>
-      <input type="number" id="quantity" name="quantity" min="1" value="1" required aria-required="true" />
-
-      <label for="name">Nama Lengkap</label>
-      <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap" required aria-required="true" />
-
-      <label for="phone">Nomor Telepon</label>
-      <input type="text" id="phone" name="phone" placeholder="Masukkan nomor telepon" required aria-required="true" pattern="[0-9+\- ]+" title="Masukkan nomor telepon yang benar" />
-
-      <label for="address">Alamat Pengiriman</label>
-      <textarea id="address" name="address" placeholder="Masukkan alamat lengkap pengiriman" required aria-required="true" rows="3"></textarea>
-
-      <div class="coupon-section" aria-label="Kupon Diskon">
-        <button type="button" id="claimCouponBtn" aria-live="polite" aria-pressed="false">Klaim Kupon</button>
-        <input type="text" id="coupon" name="coupon" placeholder="Masukkan kode kupon" disabled aria-disabled="true" />
-        <button type="button" id="applyCouponBtn" disabled>Gunakan Kupon</button>
-      </div>
-      <p id="couponMessage" class="discount-info" aria-live="polite"></p>
-
-      <button type="submit" id="submit-order">Pesan Sekarang</button>
-    </form>
-  </section>
-</main>
-
-<footer>
-  &copy; 2025 Pecel Lele - Semua hak cipta dilindungi.
-  <div class="owner" tabindex="0" aria-label="Owner info">
-    <strong>Ade Cahyo Nurrohman</strong><br />
-    <span class="phone">02322147388</span>
-    <a href="https://linktr.ee/Cahyoo21" target="_blank" rel="noopener noreferrer" class="support-link">Support Us</a>
-  </div>
-</footer>
-
-<script>
-  (() => {
-    const claimBtn = document.getElementById('claimCouponBtn');
-    const couponInput = document.getElementById('coupon');
-    const couponApplyBtn = document.getElementById('applyCouponBtn');
-    const couponMessage = document.getElementById('couponMessage');
-    const orderForm = document.getElementById('orderForm');
-
-    // Coupons and discounts
-    const coupons = {
-      "DISKON10": 0.10,
-      "PECELHEMAT": 0.15,
-      "LELEJUMBO": 0.05
-    };
-
-    let appliedDiscount = 0;
-    let couponClaimed = false;
-
-    claimBtn.addEventListener('click', () => {
-      if (!couponClaimed) {
-        couponInput.disabled = false;
-        couponInput.setAttribute('aria-disabled', 'false');
-        couponApplyBtn.disabled = false;
-        couponClaimed = true;
-        claimBtn.setAttribute('aria-pressed', 'true');
-        claimBtn.textContent = 'Kupon Diklaim';
-        claimBtn.disabled = true;
-        couponMessage.textContent = 'Masukkan kode kupon dan klik "Gunakan Kupon".';
-        couponMessage.style.color = '#207a20';
-        couponInput.focus();
-      }
-    });
-
-    couponApplyBtn.addEventListener('click', () => {
-      const code = couponInput.value.trim().toUpperCase();
-      if (!code) {
-        couponMessage.textContent = 'Masukkan kode kupon terlebih dahulu.';
-        couponMessage.style.color = '#a00';
-        appliedDiscount = 0;
-        return;
-      }
-      if (coupons.hasOwnProperty(code)) {
-        appliedDiscount = coupons[code];
-        couponMessage.textContent = `Kupon berhasil diterapkan! Anda mendapatkan diskon ${(appliedDiscount * 100).toFixed(0)}%.`;
-        couponMessage.style.color = '#207a20';
-      } else {
-        couponMessage.textContent = 'Kode kupon tidak valid.';
-        couponMessage.style.color = '#a00';
-        appliedDiscount = 0;
-      }
-    });
-
-    orderForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const menu = orderForm.menu.value;
-      const quantity = parseInt(orderForm.quantity.value);
-      const name = orderForm.name.value.trim();
-      const phone = orderForm.phone.value.trim();
-      const address = orderForm.address.value.trim();
-
-      if (!menu || !quantity || !name || !phone || !address) {
-        alert('Mohon lengkapi semua data untuk melakukan pemesanan.');
-        return;
-      }
-
-      // Prices map
-      const prices = {
-        "Pecel Lele Hemat": 10000,
-        "Pecel Lele Jumbo": 17000,
-        "Pecel Lele Kremes": 15000
-      };
-
-      const pricePerUnit = prices[menu];
-      let totalPrice = pricePerUnit * quantity;
-
-      if (appliedDiscount > 0) {
-        totalPrice = totalPrice * (1 - appliedDiscount);
-      }
-
-      totalPrice = Math.round(totalPrice);
-
-      // Encode order details for query string
-      const params = new URLSearchParams({
-        menu,
-        quantity,
-        name,
-        phone,
-        address,
-        discount: appliedDiscount > 0 ? appliedDiscount : 0,
-        totalPrice
-      });
-
-      // Redirect to payment.html with order info
-      window.location.href = `payment.html?${params.toString()}`;
-    });
-  })();
-</script>
+    <header>
+        <div class="logo">
+            <img src="https://i.pravatar.cc/32?img=3" alt="Kukuh Aldyanto" />
+            Kukuhaldy
+        </div>
+        <nav>
+            <a href="#projects">Project</a>
+            <a href="#blog">Blog</a>
+            <a href="#youtube">Youtube</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <div class="intro">
+            <h2>Hi, i’m Kukuh Aldyanto</h2>
+            <h1>UI/UX Designer Who Teaches Design on Youtube.</h1>
+            <p>
+                I’m from Indonesia and I have been working as a UI UX designer for more than 5 years. 
+                I’ve worked for a Dutch company 
+                <a href="https://frisseblikken.com/" target="_blank" rel="noopener">Frisseblikken</a> as a web designer and front-end developer for 3 years, 
+                I build my own web development team 
+                <a href="https://duosweb.com/" target="_blank" rel="noopener">Duosweb</a> since 2018, and currently I work for <a href="https://bold.au/" target="_blank" rel="noopener">Bold</a> Australia as UI Designer since 2020. 
+                I’ve been freelancing since 2012, and right now I am looking forward to collaborate with you!
+            </p>
+            <div class="contact-buttons">
+                <a href="mailto:kukuhaldy@example.com" class="btn-email" aria-label="Email Me">
+                    <svg class="email-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M4 4h16v16H4z" fill="none"/>
+                        <path d="M20 6v12H4V6h16m0-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM4 8l8 5 8-5v2l-8 5-8-5V8z"/>
+                    </svg>
+                    Email Me
+                </a>
+                <a href="https://www.youtube.com/c/kukuhaldy" target="_blank" rel="noopener" class="btn-social" aria-label="Youtube">
+                    &#9658;
+                </a>
+                <a href="https://instagram.com/kukuhaldy" target="_blank" rel="noopener" class="btn-social" aria-label="Instagram">
+                    &#x1F4F7;
+                </a>
+                <a href="https://wa.me/628123456789" target="_blank" rel="noopener" class="btn-social" aria-label="WhatsApp">
+                    &#x2709;
+                </a>
+            </div>
+            <a href="/cv-kukuhaldy.pdf" download class="download-cv" aria-label="Download CV">
+                &#8681; Download CV
+            </a>
+        </div>
+        <div class="profile-photo">
+            <img src="https://kukuhaldy.com/wp-content/uploads/2022/02/IMG_4889-1.jpg" alt="Foto Kukuh Aldyanto" style="width:100%;border-radius: 6px;filter: grayscale(100%) contrast(80%);" />
+        </div>
+    </main>
 </body>
 </html>
-
