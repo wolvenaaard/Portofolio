@@ -1,210 +1,272 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portofolio Kukuh Aldyanto</title>
-    <style>
-        /* Reset dan style dasar */
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #181818;
-            color: white;
-        }
-        a {
-            color: #d9d900;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 600;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px 60px;
-            background-color: #0e0e0e;
-            align-items: center;
-        }
-        header .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        header .logo img {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-        }
-        nav a {
-            font-weight: 600;
-            color: #d9d900;
-            cursor: pointer;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            display: flex;
-            max-width: 1200px;
-            margin: 30px auto;
-            align-items: center;
-            gap: 50px;
-            padding: 0 20px;
-        }
-        main .intro {
-            max-width: 600px;
-        }
-        main .intro h2 {
-            font-weight: 600;
-            font-size: 22px;
-            color: #3cbf28;
-            margin-bottom: 10px;
-        }
-        main .intro h1 {
-            font-size: 36px;
-            font-weight: 900;
-            margin: 0 0 20px 0;
-        }
-        main .intro p {
-            font-size: 15px;
-            line-height: 1.6;
-            color: #ccc;
-        }
-        main .intro p a {
-            color: white;
-        }
-        main .intro p a:hover {
-            text-decoration: underline;
-        }
-        .contact-buttons {
-            margin: 25px 0 15px 0;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        .btn-email {
-            background-color: #3cbf28;
-            border: none;
-            padding: 10px 25px;
-            color: white;
-            font-weight: 600;
-            border-radius: 4px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-        }
-        .btn-email:hover {
-            background-color: #329e21;
-        }
-        .btn-social {
-            color: white;
-            font-size: 20px;
-            cursor: pointer;
-        }
-        .btn-social:hover {
-            color: #3cbf28;
-        }
-        .download-cv {
-            font-size: 13px;
-            color: #999;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            cursor: pointer;
-        }
-        .download-cv:hover {
-            text-decoration: underline;
-        }
-        .profile-photo {
-            max-width: 300px;
-            border-radius: 6px;
-            filter: grayscale(100%) contrast(80%);
-            position: relative;
-        }
-        .profile-photo svg {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        /* Style icon inline untuk Email dengan SVG */
-        .email-icon {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            fill: white;
-        }
-    
-        /* Responsif */
-        @media (max-width: 900px) {
-            main {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .profile-photo {
-                max-width: 100%;
-                margin-top: 25px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ade Cahyo Nurrohman | Game Programmer</title>
+<meta name="description" content="Portofolio Ade Cahyo Nurrohman, Game Programmer (Unity & C#). Mahasiswa STMM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="https://i.pravatar.cc/32?img=3" alt="Kukuh Aldyanto" />
-            Kukuhaldy
+
+<header>
+  <div class="wrap nav">
+    <a href="#home" class="logo"><i></i>Ade Cahyo</a>
+    <nav>
+      <ul>
+        <li><a class="link" href="#about">Tentang</a></li>
+        <li><a class="link" href="#projects">Proyek</a></li>
+        <li><a class="link" href="sertifikat.html">Sertifikat</a></li>
+        <li><a class="link" href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <div class="wrap hero">
+    <div>
+      <div class="badge mono"><b></b> Terbuka untuk kolaborasi</div>
+      <h1>
+        Game <span class="hl">Programmer</span><br>
+        <span class="out">Unity</span> &amp; C#.
+      </h1>
+      <p class="sub">Halo, saya <strong>Ade Cahyo Nurrohman</strong>. Saya membangun sistem gameplay: dari player controller, combat dan game feel, sampai save system dan integrasi environment di Unity.</p>
+      <div class="cta">
+        <a href="#projects" class="btn primary">Lihat Proyek →</a>
+        <a href="kontak.html" class="btn ghost">Hubungi Saya</a>
+      </div>
+    </div>
+
+    <aside class="cert-stack" aria-label="Sertifikat">
+      <div class="label mono"><span>Sertifikat</span><span style="color:var(--muted)">Pilihan</span></div>
+      <div class="cert-preview" id="certPreview"></div>
+      <a href="sertifikat.html" class="btn primary cert-more">Lihat Semua Sertifikat →</a>
+    </aside>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div>
+      <span>Unity Engine</span><span>C# Scripting</span><span>Gameplay Programming</span><span>Game Feel</span><span>Git &amp; GitHub</span>
+      <span>Unity Engine</span><span>C# Scripting</span><span>Gameplay Programming</span><span>Game Feel</span><span>Git &amp; GitHub</span>
+      <span>Unity Engine</span><span>C# Scripting</span><span>Gameplay Programming</span><span>Game Feel</span><span>Git &amp; GitHub</span>
+      <span>Unity Engine</span><span>C# Scripting</span><span>Gameplay Programming</span><span>Game Feel</span><span>Git &amp; GitHub</span>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="mono">01</span><h2>Tentang Saya</h2></div>
+      <div class="about">
+        <p class="lead reveal">
+          Saya mahasiswa <em>STMM</em> dan <em>game programmer</em> yang bekerja dengan Unity. Saya sudah terlibat di game jam, bootcamp nasional, dan proyek tim berbulan-bulan, dari menjadi <em>Lead Programmer</em> sampai membangun sistem FPS lengkap, dengan alur kerja kolaboratif lewat GitHub.
+        </p>
+        <div class="facts reveal">
+          <div class="fact"><span class="mono">Peran</span><strong>Game Programmer</strong></div>
+          <div class="fact"><span class="mono">Pendidikan</span><strong>Mahasiswa STMM</strong></div>
+          <div class="fact"><span class="mono">Engine</span><strong>Unity</strong></div>
+          <div class="fact"><span class="mono">Proyek</span><strong>5 game</strong></div>
         </div>
-        <nav>
-            <a href="#projects">Project</a>
-            <a href="#blog">Blog</a>
-            <a href="#youtube">Youtube</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <div class="intro">
-            <h2>Hi, i’m Kukuh Aldyanto</h2>
-            <h1>UI/UX Designer Who Teaches Design on Youtube.</h1>
-            <p>
-                I’m from Indonesia and I have been working as a UI UX designer for more than 5 years. 
-                I’ve worked for a Dutch company 
-                <a href="https://frisseblikken.com/" target="_blank" rel="noopener">Frisseblikken</a> as a web designer and front-end developer for 3 years, 
-                I build my own web development team 
-                <a href="https://duosweb.com/" target="_blank" rel="noopener">Duosweb</a> since 2018, and currently I work for <a href="https://bold.au/" target="_blank" rel="noopener">Bold</a> Australia as UI Designer since 2020. 
-                I’ve been freelancing since 2012, and right now I am looking forward to collaborate with you!
-            </p>
-            <div class="contact-buttons">
-                <a href="mailto:kukuhaldy@example.com" class="btn-email" aria-label="Email Me">
-                    <svg class="email-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                        <path d="M4 4h16v16H4z" fill="none"/>
-                        <path d="M20 6v12H4V6h16m0-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM4 8l8 5 8-5v2l-8 5-8-5V8z"/>
-                    </svg>
-                    Email Me
-                </a>
-                <a href="https://www.youtube.com/c/kukuhaldy" target="_blank" rel="noopener" class="btn-social" aria-label="Youtube">
-                    &#9658;
-                </a>
-                <a href="https://instagram.com/kukuhaldy" target="_blank" rel="noopener" class="btn-social" aria-label="Instagram">
-                    &#x1F4F7;
-                </a>
-                <a href="https://wa.me/628123456789" target="_blank" rel="noopener" class="btn-social" aria-label="WhatsApp">
-                    &#x2709;
-                </a>
+      </div>
+
+      <div class="skills-wrap reveal">
+        <h3 class="mono">Tools &amp; Keahlian</h3>
+        <div class="skills">
+          <span class="chip">Unity Engine</span>
+          <span class="chip">C# Scripting</span>
+          <span class="chip">Player Controller &amp; Combat</span>
+          <span class="chip">Hitstop &amp; Particle Feedback</span>
+          <span class="chip">Save &amp; Checkpoint System</span>
+          <span class="chip">Lighting &amp; Environment</span>
+          <span class="chip">Optimisasi Performa</span>
+          <span class="chip">Git &amp; GitHub</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" style="padding-top:20px">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="mono">02</span><h2>Karya &amp; Proyek</h2></div>
+      <p class="mono reveal" style="color:var(--muted);margin:-30px 0 30px">Klik proyek untuk melihat detail</p>
+
+      <div class="projects">
+
+        <!-- 01 -->
+        <details class="project reveal">
+          <summary>
+            <div class="num">01</div>
+            <div>
+              <h3>V.I.R.O.S.I.S</h3>
+              <div class="tags"><span class="tag mono">Programmer</span><span class="tag mono">FPS · PC</span><span class="tag mono">Ags – Des 2025</span></div>
             </div>
-            <a href="/cv-kukuhaldy.pdf" download class="download-cv" aria-label="Download CV">
-                &#8681; Download CV
-            </a>
-        </div>
-        <div class="profile-photo">
-            <img src="https://kukuhaldy.com/wp-content/uploads/2022/02/IMG_4889-1.jpg" alt="Foto Kukuh Aldyanto" style="width:100%;border-radius: 6px;filter: grayscale(100%) contrast(80%);" />
-        </div>
-    </main>
+            <div class="plus">+</div>
+          </summary>
+          <div class="detail">
+            <div>
+              <p>Game FPS 3D di Unity yang berfokus pada mekanik inti pemain, interaksi lingkungan, dan alur gameplay yang utuh dari awal sampai akhir. Dikerjakan kolaboratif dengan GitHub sebagai version control.</p>
+              <p style="margin-top:14px">Saya juga terlibat dalam integrasi mekanik ke level, pengaturan scene, dan optimisasi performa dengan membersihkan asset yang tidak terpakai.</p>
+            </div>
+            <div>
+              <h4>Tanggung jawab</h4>
+              <ul>
+                <li>Player controller, shooting system, weapon handling, ammo system</li>
+                <li>Teleport, dialogue trigger, cutscene, objective system</li>
+                <li>Smart lighting, toggle lamp, volumetric fog</li>
+                <li>Keycard access system</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <!-- 02 -->
+        <details class="project reveal">
+          <summary>
+            <div class="num">02</div>
+            <div>
+              <h3>Ninya: The Virus Queen</h3>
+              <div class="tags"><span class="tag mono">Programmer</span><span class="tag mono">Gimersia Creator Camp 2025</span><span class="tag mono">Game Jam 5 Hari</span></div>
+            </div>
+            <div class="plus">+</div>
+          </summary>
+          <div class="detail">
+            <div>
+              <p>Game aksi top-down dengan evolusi karakter. Pemain menjadi Ninya, virus hasil eksperimen yang menyusup ke tubuh manusia dan berambisi mencapai otak. Tentacle yang berputar menjadi senjata otomatis, sementara sel darah putih, neutrofil, dan T-cell bisa mencabut tentacle-nya.</p>
+              <p style="margin-top:14px">Tujuan pemain: bertahan hingga mencapai jarak 100.000 mikrometer di dalam tubuh.</p>
+            </div>
+            <div>
+              <h4>Tanggung jawab</h4>
+              <ul>
+                <li>Player movement</li>
+                <li>Hitstop mechanic</li>
+                <li>Particle spawn system</li>
+                <li>Score mechanic</li>
+                <li>UI implementation</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <!-- 03 -->
+        <details class="project reveal">
+          <summary>
+            <div class="num">03</div>
+            <div>
+              <h3>Warrior of Batavinia</h3>
+              <div class="tags"><span class="tag mono">Lead Programmer</span><span class="tag mono">2D Pixel Art</span><span class="tag mono">2025</span></div>
+            </div>
+            <div class="plus">+</div>
+          </summary>
+          <div class="detail">
+            <div>
+              <p>Game aksi 2D pixel-art yang memadukan eksplorasi, platforming, dan pertarungan cepat. Sebagai Lead Programmer, saya membangun fondasi gameplay, mengatur integrasi environment, serta menjaga performa dan stabilitas selama pengembangan.</p>
+            </div>
+            <div>
+              <h4>Tanggung jawab</h4>
+              <ul>
+                <li>Checkpoint &amp; save system untuk level semi-linear</li>
+                <li>Wall jump mechanic</li>
+                <li>Item interaction system</li>
+                <li>Parallax environment</li>
+                <li>Player animation &amp; attack combo</li>
+                <li>Hitstop &amp; particle feedback</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <!-- 04 -->
+        <details class="project reveal">
+          <summary>
+            <div class="num">04</div>
+            <div>
+              <h3>Java Jumper</h3>
+              <div class="tags"><span class="tag mono">Lead Programmer</span><span class="tag mono">Global Game Jam Yogyakarta</span><span class="tag mono">24–26 Jan 2025</span></div>
+            </div>
+            <div class="plus">+</div>
+          </summary>
+          <div class="detail">
+            <div>
+              <p>Platformer dengan gelembung sebagai inti mekanik: pemain memakai gelembung yang bisa pecah untuk melompat ke atas, sambil menghadapi gelembung jebakan yang menipu arah. Dikerjakan 48 jam nonstop di Global Game Jam 2025 Yogyakarta.</p>
+              <p style="margin-top:14px">Memang tidak juara, tetapi jadi pengalaman penting soal manajemen waktu dan kerja tim di bawah deadline ketat.</p>
+            </div>
+            <div>
+              <h4>Tanggung jawab</h4>
+              <ul>
+                <li>Sistem jump &amp; bubble mechanic</li>
+                <li>Pembuatan dan integrasi environment</li>
+                <li>Main menu dan UI</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <!-- 05 -->
+        <details class="project reveal">
+          <summary>
+            <div class="num">05</div>
+            <div>
+              <h3>Gaudia Harmonia</h3>
+              <div class="tags"><span class="tag mono">Second Programmer</span><span class="tag mono">IGDX Bootcamp 2024</span><span class="tag mono">Jun – Sep 2024</span></div>
+            </div>
+            <div class="plus">+</div>
+          </summary>
+          <div class="detail">
+            <div>
+              <p>Proyek tim dalam IGDX Bootcamp 2024, program pembinaan talenta game developer nasional oleh Kominfo dan Asosiasi Game Indonesia (AGI). Bekerja lintas disiplin bersama programmer, artist, dan game designer, serta belajar pipeline pengembangan game profesional.</p>
+            </div>
+            <div>
+              <h4>Tanggung jawab</h4>
+              <ul>
+                <li>Environment system dan integrasi aset visual</li>
+                <li>Lighting &amp; ambience</li>
+                <li>Sinkronisasi elemen interaktif dengan desain level</li>
+                <li>Pengelolaan scene dan performa di Unity</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="contact reveal" id="contact">
+    <p class="mono" style="position:relative;color:var(--accent-2)">03 — Kontak</p>
+    <h2 style="margin-top:18px">Mari <span>berkolaborasi.</span></h2>
+    <p class="t">Tertarik mengembangkan game bersama atau butuh programmer untuk game jam dan proyek tim? Jangan ragu menghubungi saya kapan saja.</p>
+    <a href="kontak.html" class="btn">Halaman Kontak ↗</a>
+    <div class="pills" id="pills"></div>
+  </div>
+</main>
+
+<div class="wrap">
+  <footer class="mono">
+    <span>&copy; 2026 Ade Cahyo Nurrohman</span>
+    <span>Game Programmer</span>
+  </footer>
+</div>
+
+<div class="lb" id="lightbox"><img alt=""><p class="mono"></p></div>
+
+<script src="certificates.js"></script>
+<script src="links.js"></script>
+<script>
+  renderCerts(document.getElementById('certPreview'), window.CERTIFICATES.slice(0, 3));
+  renderLinks(document.getElementById('pills'), 'pills');
+  var lb = document.getElementById('lightbox');
+  lb.addEventListener('click', function(){ lb.classList.remove('open'); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') lb.classList.remove('open'); });
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
 </body>
 </html>

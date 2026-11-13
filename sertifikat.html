@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sertifikat | Ade Cahyo Nurrohman</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo"><i></i>Ade Cahyo</a>
+    <nav>
+      <ul>
+        <li><a class="link" href="index.html">← Kembali</a></li>
+        <li><a class="link" href="index.html#projects">Proyek</a></li>
+        <li><a class="link" href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <span class="mono" style="color:var(--accent)">Sertifikat &amp; Penghargaan</span>
+    <h1>Semua <span style="background:var(--accent-2);padding:0 .1em;border-radius:.1em">sertifikat.</span></h1>
+    <p>Klik sertifikat untuk memperbesar. Tekan Esc atau klik di mana saja untuk menutup.</p>
+  </div>
+  <div class="cert-grid" id="certGrid"></div>
+  <a href="index.html" class="btn ghost" style="margin-bottom:100px">← Kembali ke Beranda</a>
+</main>
+
+<div class="lb" id="lightbox"><img alt=""><p class="mono"></p></div>
+
+<script src="certificates.js"></script>
+<script>
+  renderCerts(document.getElementById('certGrid'), window.CERTIFICATES);
+  var lb = document.getElementById('lightbox');
+  lb.addEventListener('click', function(){ lb.classList.remove('open'); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') lb.classList.remove('open'); });
+</script>
+</body>
+</html>
